@@ -1,0 +1,266 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --primary-color: #2c3e50;
+    --primary-color-darker: #1d2834;
+    --secondary-color: #1ABC9C;
+    --secondary-color-darker:#169c81;
+}
+
+/* Global styles */
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+
+.text-white{
+    color: white;
+}
+
+.text-primary{
+    color: var(--primary-color);
+}
+
+.text-secondary{
+    color: var(--secondary-color);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-lg{
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+.bg-primary{
+    background-color: var(--primary-color);
+}
+.bg-secondary{
+    background-color: var(--secondary-color);
+}
+.bg-primary-darker{
+    background-color: var(--primary-color-darker);
+}
+
+.section-title{
+    padding-top: 3rem;
+}
+.section-title .icons{
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+main section {
+    margin-bottom: 3rem;
+}
+
+
+
+/* Header styles */
+#navbar {
+    width: 100%;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+    font-weight: bold;
+}
+#nav-name {
+    font-size: 1.7rem;
+}
+
+#navbar ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+#navbar a{
+    padding: 1.3rem 1rem;
+    border-radius: 10px;
+}
+
+#navbar a:hover{
+    color: var(--secondary-color);
+}
+
+
+
+#hero{
+    margin-top: 10vh;
+    height: 90vh;
+    width: 100vw;
+    padding-top: 5rem;
+}
+
+#hero img{
+    display: block;
+    width: 20%;
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+}
+
+#hero-title-name{
+    font-size: 4rem;
+    margin-top: 1.2rem;
+}
+
+#hero-text{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.icons{
+    margin-top: 2rem;
+}
+/* Portfolio section */
+#portfolio {
+    height: 100vh;
+    width: 100%;
+}
+
+#portfolio-grid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin: auto;
+}
+
+#portfolio-grid img{
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+/* About section */
+#about {
+    width: 100%;
+    height: 75vh;
+}
+
+#about-text{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    width: 70%;
+}
+
+#about-text p{
+   text-align: left;
+   width: 40%;
+   font-weight: 300;
+   font-size: 1.1rem;
+}
+
+#btn-download{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 1rem 2.1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+#btn-download:hover{
+    background-color: white;
+    color: var(--secondary-color-darker);
+    transition: all .5s ease-in-out;
+}
+
+/* Contact section */
+
+#contact-form {
+    width: 50%;
+    margin: auto;
+}
+#contact-form label{
+    font-size: 1.2rem;
+    color: gray;
+}
+#contact-form input{
+    height: 2rem;
+    width: 100%;
+    margin: .5rem 0 2rem 0;
+    border-bottom: 1px solid gray;
+}
+
+#contact-form textarea{
+    width: 100%;
+    margin: .5rem 0 2rem 0;
+    border-bottom: 1px solid gray;
+}
+
+#contact-button{
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border: 1px solid white;
+    padding: 1rem 2.1rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+#contact-button:hover{
+    background-color:var(--secondary-color-darker);
+    transition: all .5s ease-in-out;
+}
+
+/* Footer section */
+#footer-info{
+    display: flex;
+    justify-content: space-around;
+    padding: 5rem 0;
+}
+
+.footer-section {
+    width: 30%;
+
+}
+
+#footer-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+
+#footer-icons i{
+    font-size: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 1rem;
+}
+#footer-icons i:hover{
+    color: var(--secondary-color);
+}
+
+
+#footer-copy{
+    padding: .7rem 0;
+    margin-right: 0;
+}
