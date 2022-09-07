@@ -13,13 +13,16 @@
 
 </head>
 <body>
-    <header class="text-white text-upper">
+    <header onmouseover="urlhash('#hero-l')" href="#hero-l"  class="text-white text-upper">
         <nav id="navbar" class="bg-primary d-flex">
-            <div id="nav-name" class="text-white ">Francisco Hinojosa</div>
+            <a href="/#hero">
+                <div id="nav-name" class="text-white ">Francisco Hinojosa</div>
+            </a>
+           
             <ul id="nav-menu">
-                <li><a href="" class="text-white">Portfolio</a></li>
-                <li><a href="" class="text-white">About</a></li>
-                <li><a href="" class="text-white">Contact</a></li>
+                <li><a href="/#portfolio" id="nav-portfolio" class="nav-item text-white">Portfolio</a></li>
+                <li><a href="/#about" id="nav-about" class="nav-item text-white">About</a></li>
+                <li><a href="/#contact"  id="nav-contact" class="nav-item text-white">Contact</a></li>
             </ul>
         </nav>
         <section id="hero" class="bg-secondary text-white text-center">
@@ -45,7 +48,7 @@
     </header>
     <main>
         <!-- Portfolio section -->
-        <section id="portfolio" class="text-center text-upper">
+        <section onmouseover="urlhash('#portfolio-l')" href="#porfolio-l" id="portfolio" class="text-center text-upper">
             <div class="section-title text-primary">
                 <h2 class="text-lg">Portfolio</h2>
                 <div class="icons">
@@ -74,7 +77,7 @@
             </div>
         </section>
         <!-- ABOUT -->
-        <section id="about" class=" bg-secondary text-center text-white">
+        <section onmouseover="urlhash('#about-l')" href="#about-l" id="about" class=" bg-secondary text-center text-white">
             <div class="section-title">
                 <h2 class="text-lg text-upper">About</h2>
                 <div class="icons">
@@ -101,7 +104,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section onmouseover="urlhash('#contact-l')" href="#contact-l"id="contact">
             <div class="section-title text-primary text-center">
                 <h2 class="text-lg text-upper">Contact me</h2>
                 <div class="icons">
@@ -166,7 +169,7 @@
         <div id="footer-copy" class="bg-primary-darker text-white text-center">
             <p>Copyright © Your Website 2022</p>
         </div>
-
+    <script src="./app.js"></script>
     </footer>
     
 </body>
