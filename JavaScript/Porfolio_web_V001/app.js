@@ -3,15 +3,22 @@
 window.onscroll = function (){scrollFunction()};
 
 function scrollFunction(){
-    if (document.body.scrollTo> 80 || document.documentElement.scrollTop >80){
-        document.getElementById("navbar").style.height ="8vh";
-    }
-    else if(document.body.scrollTo> 1000 || document.documentElement.scrollTop >1000){
-        document.getElementById("nav-portfolio").style.backgroundColor ="red";
-    }
-    
-    else{
-        document.getElementById("navbar").style.height ="12vh";
+
+
+    if( navigator.userAgent.includes("Mobile")){
+        let x;
+    } else{
+
+        if (document.body.scrollTo> 80 || document.documentElement.scrollTop >80){
+            document.getElementById("navbar").style.height ="8vh";
+        }
+        else if(document.body.scrollTo> 1000 || document.documentElement.scrollTop >1000){
+            document.getElementById("nav-portfolio").style.backgroundColor ="red";
+        }
+        
+        else{
+            document.getElementById("navbar").style.height ="12vh";
+        }
     }
 
 }
@@ -20,7 +27,6 @@ function scrollFunction(){
 window.addEventListener('hashchange',(e)=>hashColors(e))  
 
 function hashColors(e){
-    console.log(e.target.location)
     if(e.target.location.hash.includes('portfolio')){
         document.getElementById("nav-portfolio").classList.add("active");
         document.getElementById("nav-about").classList.remove("active");
@@ -49,5 +55,28 @@ function urlhash (link) {
 }
 
 
-// Function to visualize the cards of the portfolio
+// function to open menu on mobile
+let menu = document.getElementById("menu-hamburger");
+menu.addEventListener("click",()=>{
+    document.getElementById("menu-mobile").classList.toggle("collapse")
 
+})
+
+document.addEventListener('click', event => {
+    if(event.target.classList.contains('nav-item-mobile') ){
+        document.getElementById("menu-mobile").classList.toggle("collapse")
+    }
+  })
+
+
+// function to open cards
+
+document.addEventListener('click', event => {
+    if(event.target.classList.contains('close-mark') ){
+        event.target.parentNode.classList.add("collapse")
+    }else if(event.target.classList.contains('portfolio-component')){
+        let value = event.target.getAttribute("value")
+        
+        document.getElementById(`portfolio-${value}`).classList.remove("collapse")
+    }
+  })
