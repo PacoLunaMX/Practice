@@ -1,37 +1,43 @@
 import datetime as _dt
-import string
+
 import pydantic as _pydantic
 
+
 class _UserBase(_pydantic.BaseModel):
-    email:str
+    email: str
+
 
 class UserCreate(_UserBase):
-    hash_password: str
+    hashed_password: str
 
     class Config:
         orm_mode = True
+
 
 class User(_UserBase):
     id: int
 
     class Config:
-        orm_mode=True
+        orm_mode = True
 
-class _LeadsBase(_pydantic.BaseModel):
-    first_name:str
-    last_name:str
-    email:str
-    company:str
-    note:str
 
-class LeadCreate(_LeadsBase):
+class _LeadBase(_pydantic.BaseModel):
+    first_name: str
+    last_name: str
+    email: str
+    company: str
+    note: str
+
+
+class LeadCreate(_LeadBase):
     pass
 
-class Lead(_LeadsBase):
+
+class Lead(_LeadBase):
     id: int
-    owner_id:int
+    owner_id: int
     date_created: _dt.datetime
     date_last_updated: _dt.datetime
 
     class Config:
-        orm_mode=True
+        orm_mode = True
