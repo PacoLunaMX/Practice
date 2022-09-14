@@ -71,3 +71,7 @@ async def update_lead(lead: _schemas.LeadCreate,lead_id: int,user: _schemas.User
 db:_orm.Session = _fastapi.Depends(_services.get_db)):
     await _services.update_lead(lead, lead_id, user, db)
     return{"message", "Successfully updated"} 
+
+@app.get("/api")
+async def root():
+    return {"message":"Awesome Leads Manager"}
