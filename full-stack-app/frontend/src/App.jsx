@@ -5,7 +5,7 @@ import Register from './components/Register';
 import Header from './components/Header';
 import { useContext } from 'react';
 import { UserContext } from './context/UserContext';
-
+import Login from './components/Login';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -41,7 +41,7 @@ function App() {
         {
           !token ? (
             <div className="columns">
-              <Register/><p>Login</p>
+              <Register/><Login/>
             </div>
           ) :
           (
