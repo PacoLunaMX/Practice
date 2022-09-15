@@ -6,6 +6,8 @@ import Header from './components/Header';
 import { useContext } from 'react';
 import { UserContext } from './context/UserContext';
 import Login from './components/Login';
+import Table from './components/Table';
+
 
 function App() {
   const [message, setMessage] = useState("");
@@ -45,7 +47,7 @@ function App() {
             </div>
           ) :
           (
-          <p>Table</p>
+          <Table></Table>
           )
         }
       </div>
