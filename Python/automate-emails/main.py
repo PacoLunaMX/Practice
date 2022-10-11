@@ -4,8 +4,8 @@ from email.message import EmailMessage
 
 
 from_addr = "learningnotes.email@gmail.com"
-password="kuoaesqitpyozgim"
-to_addrs="f.hinojosa9@hotmail.com"
+password="****"
+to_addrs="***"
 msg= EmailMessage()
 
 body= """
